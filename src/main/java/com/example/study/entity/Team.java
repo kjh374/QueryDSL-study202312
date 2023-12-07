@@ -3,6 +3,7 @@ package com.example.study.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter @Setter
@@ -21,6 +22,7 @@ public class Team {
     private String name;
 
     @OneToMany(mappedBy = "team")
-    private List<Member> members;
+    @Builder.Default
+    private List<Member> members = new ArrayList<>();
 
 }
