@@ -8,4 +8,5 @@ public interface MemeberRepositoryCustom {
 
     List<Member> findByName(String name);
 
+    List<Member> findUser(String nameParam, Integer ageParam);
 }
